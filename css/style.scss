@@ -10,6 +10,8 @@ a{
 }
 :root{
     --F1 :#f1f1f1;
+    --c1:#1C1C24;
+    --c2 : #323241;
 }
 header{
     height: fit-content;
@@ -18,7 +20,7 @@ header{
     z-index: 999;
 }
 nav{
-    background-color: #1C1C24;
+    background-color: var(--c1);
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -45,4 +47,58 @@ nav{
             }
         }
     }
+}
+.banner{
+    background-color: yellow;
+    width: 100%;
+    height: 750px;
+    position: relative;
+    img{
+        height: 600px;
+        width: auto;
+        top: 75px;
+        left: 50px;
+        position: fixed;
+
+    }
+    .fixed-banner{
+        left: 50px;
+        top: 150px;
+        width: 450px;
+        height: 500px;
+        position: absolute;
+        box-shadow: 0 0 0 9999px var(--c2);
+        
+    }
+    .doc-text{
+        width: 500px;
+        height: fit-content;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 35%;
+        right: 5%;
+        h2{
+            color: var(--F1);
+            font-weight: 700;
+            margin-top: -15px;
+            font-size: 60px;
+        }
+        p{
+            color: var(--F1);
+            font-weight: 500;
+            margin-top: 15px;
+        }
+        .button{
+            color: var(--F1);
+            border: solid 1px var(--F1);
+            padding: 10px;
+            margin-top: 50px;
+            cursor: pointer;
+        }
+    }
+}
+.test{
+    height: 200vh;
 }
