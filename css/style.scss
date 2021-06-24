@@ -10,6 +10,7 @@ a{
 }
 :root{
     --F1 :#f1f1f1;
+    --F2:#5655FF;
     --c1:#1C1C24;
     --c2 : #323241;
 }
@@ -24,81 +25,136 @@ nav{
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     .logo{
         padding: 10px;
         width: fit-content;
         cursor: pointer;
         margin-left: 5%;
-
     }
-    ul{
-        list-style: none;
-        color: var(--F1);
+    .menu-but{
+        font-size: 20px;
+        display: none;
+        cursor: pointer;
+    }
+    .menu{
         display: flex;
-        align-items: center;
-        justify-content: center;
         margin-right: 5%;
-        li{
-            font-weight: 300;
-            padding: 5px;
-            margin-right: 5px;
-            a{
-                color: var(--F1);
+        ul{
+            list-style: none;
+            color: var(--F1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            li{
+                font-weight: 300;
+                padding: 5px;
+                margin-right: 5px;
+                a{
+                    color: var(--F1);
+                }
+            }
+        }
+    }
+    @media screen and (max-width : 750px) {
+        .menu-but{
+            display:block;
+            color: var(--F1);
+            }
+        .menu{
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            left: 100%;
+            top: 0;
+            justify-content: center;
+            background-color: var(--c1);
+            flex-direction: column;
+            font-weight: 800;
+            .first{
+                flex-direction: column;
+            }
+            ul{
+                li{
+                    font-size: 40px;
+                }
+            }
+            .secand{
+                li{
+                    margin: 10px;
+                }
+            }
+            .menu-but{
+                position: absolute;
+                top: 1%;
+                right: 1%;
+                cursor: pointer;
             }
         }
     }
 }
 .banner{
-    background-color: yellow;
-    width: 100%;
+    overflow: hidden;
     height: 750px;
+    width: 100%;
     position: relative;
-    img{
-        height: 600px;
-        width: auto;
-        top: 75px;
-        left: 50px;
-        position: fixed;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: var(--c2);
+    .parallax{
+        margin-bottom: 40px;
+        margin-left: 5%;
+        overflow: hidden;
+        width: 45%;
+        height: 80%;
+        background-color: var(--c2);
+        .imges{
+            width: 100%;
+            height: 100%;
+            background-image: url(/pics/bg-banner.webp);
+            background-size: cover;
+            background-position: top 100px;
+            background-repeat: no-repeat;
+        }
     }
-    .fixed-banner{
-        left: 50px;
-        top: 150px;
-        width: 450px;
-        height: 500px;
-        position: absolute;
-        box-shadow: 0 0 0 9999px var(--c2);
+    .banner-text{
+        width: 45%;
+        height: 100%;
+        .banner-container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--F1);
+            font-size: 50PX;
+        }
+    }
+    @media screen and (max-width : 750px) {
+        .parallax{
+            position: absolute;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            left: 0;
+            .imges{
+                background-size: cover;
+            }
+        }
+        .banner-text{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            .banner-container{
+                color:var(--c1);
+            }
+        }
         
     }
-    .doc-text{
-        width: 500px;
-        height: fit-content;
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        top: 35%;
-        right: 5%;
-        h2{
-            color: var(--F1);
-            font-weight: 700;
-            margin-top: -15px;
-            font-size: 60px;
-        }
-        p{
-            color: var(--F1);
-            font-weight: 500;
-            margin-top: 15px;
-        }
-        .button{
-            color: var(--F1);
-            border: solid 1px var(--F1);
-            padding: 10px;
-            margin-top: 50px;
-            cursor: pointer;
-        }
-    }
 }
-.test{
-    height: 200vh;
+footer{
+    height: 1100vh;
 }

@@ -17,33 +17,39 @@
                     <img src="pics/logo.webp" alt="logo">
                 </a>
             </div>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Work</a></li>
-                <li><a href="#">Aboput</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-link" aria-hidden="true" style=" transform: rotate(90deg); "></i></a></li>
-            </ul>
+            <i class="fa fa-bars menu-but" aria-hidden="true" onclick="onshow('0')"></i>
+            <div class="menu" id="menu">
+                <i class="fa fa-close menu-but" aria-hidden="true" onclick="onshow('100%')"></i>
+                <ul class="first">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Aboput</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+                <ul class="secand">
+                    <li><a href="#"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-link" aria-hidden="true" style=" transform: rotate(90deg); "></i></a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
         <div class="banner">
-            <img src="pics/bg-banner.webp" alt="banner">
-            <div class="fixed-banner">
+            <div class="parallax">
+                <div class="imges"></div>
             </div>
-            <div class="doc-text">
-                <h2>Welcome to</h2>
-                <h2>Triads</h2>
-                <h2>Designs</h2>
-                <p>Tailored Creative Solutions</p>
-                <div class="button">Contact us</div>
+            <div class="banner-text">
+                <div class="banner-container">
+                    <h2>Welcome to</h2>
+                    <h2>Triads</h2>
+                    <h2>Designs</h2>
+                </div>
             </div>
         </div>
-        <div class="test"></div>
     </main>
-    
+    <footer></footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
