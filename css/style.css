@@ -184,10 +184,10 @@ nav .menu ul li a {
       -ms-flex-align: center;
           align-items: center;
   color: var(--F1);
-  font-size: 50PX;
+  font-size: 40PX;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 800px) {
   .banner .parallax {
     position: absolute;
     margin: 0;
@@ -205,8 +205,9 @@ nav .menu ul li a {
     position: relative;
   }
   .banner .banner-text .banner-container {
-    font-size: 30px;
-    color: var(--c1);
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 35px;
   }
 }
 
