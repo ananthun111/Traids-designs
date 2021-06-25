@@ -130,6 +130,16 @@ nav{
             align-items: center;
             color: var(--F1);
             font-size: 40PX;
+            p{
+                font-size: 20px;
+                font-weight: 500;
+            }
+            button{
+                background: #1c1c2432 ;
+                color: var(--F1);
+                padding: 10px;
+                border: solid 1px var(--F1);
+            }
         }
     }
     @media screen and (max-width : 800px) {
