@@ -13,11 +13,13 @@ a{
     --F2:#5655FF;
     --c1:#1C1C24;
     --c2 : #323241;
+    --c3:#3333FC;
 }
 header{
     height: fit-content;
     width: 100%;
     position: fixed;
+    top : 0;
     z-index: 999;
 }
 nav{
@@ -94,16 +96,16 @@ nav{
     }
 }
 .banner{
+    margin-top: 50px;
     overflow: hidden;
     height: 800px;
     width: 100%;
     position: relative;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     background-color: var(--c2);
     .parallax{
-        margin-bottom: 6%;
         margin-left: 5%;
         overflow: hidden;
         width: 45%;
@@ -131,14 +133,21 @@ nav{
             color: var(--F1);
             font-size: 40PX;
             p{
+                margin-top: 20px;
                 font-size: 20px;
                 font-weight: 500;
             }
             button{
+                margin-top: 20px;
                 background: #1c1c2432 ;
                 color: var(--F1);
                 padding: 10px;
                 border: solid 1px var(--F1);
+                cursor: pointer;
+                &:hover{
+                    background: var(--F1) ;
+                    color: var(--c1) ;
+                }
             }
         }
     }
@@ -167,6 +176,127 @@ nav{
         
     }
 }
-footer{
+.work{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    .gallery{
+        padding: 50px 0px;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background-color: var(--c1);
+        .items{
+            position: relative;
+            margin: 20px;
+            flex: 1;
+            min-width: 380px;
+            .text{
+                display: none;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+            }
+            &:hover{
+                .text{
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                    position: absolute;
+                    left: 0;
+                    display: inline-block;
+                    align-items: center;
+                    background-color: #f1f1f188;
+                    h2{
+                        position: relative;
+                        text-align: center;
+                        font-weight: 500;
+                        top: 50%;
+                        transform: translate(0, -50%);
+                    }
+                }
+            }
+        }
+    }
+}
+footer{ 
     height: 1100vh;
+}
+.offer{
+    background-color: var(--c3);
+    padding: 50px;
+    .heding{
+        h2,p{
+            color: var(--F1);
+            text-align: center;
+            padding: 20px 0;
+        }
+        h2{
+            font-weight: 700;
+            font-size: 35px;
+        }
+        p{
+            font-weight: 500;
+            margin-bottom: 60px;
+        }
+    }
+    
+    .offer-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: var(--c3);
+        .item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+            text-align: center;
+            background-color: white;
+            width: 350px;
+            p,h2{
+                color: black;
+            }
+            img{
+                width: 100%;
+            }
+            .text{
+                padding: 25px;
+                width: fit-content;
+                height: 450px;
+            }
+            h3{
+                padding: 5px;
+            }
+            h3,p{
+                font-weight: 500;
+            }
+            p{
+                width: 300px;
+            }
+        }
+    }
+    @media screen and (max-width : 1100px) {
+        .offer-container{
+            flex-direction: column;
+            
+            .item{
+                width: 100%;
+                margin: 0;
+                color: var(--F1);
+                height: 100%;
+                background-color: var(--c3);
+                .text{
+                    height: 100%;
+                }
+                p{
+                    padding-right: 10%;
+                    padding-left: 10%;
+                    width: 80%;
+                }
+            }
+        }
+    }
 }

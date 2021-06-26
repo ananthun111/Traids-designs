@@ -15,6 +15,7 @@ a {
   --F2:#5655FF;
   --c1:#1C1C24;
   --c2: #323241;
+  --c3:#3333FC;
 }
 
 header {
@@ -23,6 +24,7 @@ header {
   height: fit-content;
   width: 100%;
   position: fixed;
+  top: 0;
   z-index: 999;
 }
 
@@ -128,6 +130,7 @@ nav .menu ul li a {
 }
 
 .banner {
+  margin-top: 50px;
   overflow: hidden;
   height: 800px;
   width: 100%;
@@ -138,14 +141,13 @@ nav .menu ul li a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: var(--c2);
 }
 
 .banner .parallax {
-  margin-bottom: 6%;
   margin-left: 5%;
   overflow: hidden;
   width: 45%;
@@ -188,15 +190,23 @@ nav .menu ul li a {
 }
 
 .banner .banner-text .banner-container p {
+  margin-top: 20px;
   font-size: 20px;
   font-weight: 500;
 }
 
 .banner .banner-text .banner-container button {
+  margin-top: 20px;
   background: #1c1c2432;
   color: var(--F1);
   padding: 10px;
   border: solid 1px var(--F1);
+  cursor: pointer;
+}
+
+.banner .banner-text .banner-container button:hover {
+  background: var(--F1);
+  color: var(--c1);
 }
 
 @media screen and (max-width: 800px) {
@@ -223,7 +233,169 @@ nav .menu ul li a {
   }
 }
 
+.work {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.work .gallery {
+  padding: 50px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: var(--c1);
+}
+
+.work .gallery .items {
+  position: relative;
+  margin: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 380px;
+}
+
+.work .gallery .items .text {
+  display: none;
+}
+
+.work .gallery .items img {
+  width: 100%;
+  height: 100%;
+}
+
+.work .gallery .items:hover .text {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f1f1f188;
+}
+
+.work .gallery .items:hover .text h2 {
+  position: relative;
+  text-align: center;
+  font-weight: 500;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
 footer {
   height: 1100vh;
+}
+
+.offer {
+  background-color: var(--c3);
+  padding: 50px;
+}
+
+.offer .heding h2, .offer .heding p {
+  color: var(--F1);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.offer .heding h2 {
+  font-weight: 700;
+  font-size: 35px;
+}
+
+.offer .heding p {
+  font-weight: 500;
+  margin-bottom: 60px;
+}
+
+.offer .offer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: var(--c3);
+}
+
+.offer .offer-container .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  text-align: center;
+  background-color: white;
+  width: 350px;
+}
+
+.offer .offer-container .item p, .offer .offer-container .item h2 {
+  color: black;
+}
+
+.offer .offer-container .item img {
+  width: 100%;
+}
+
+.offer .offer-container .item .text {
+  padding: 25px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 450px;
+}
+
+.offer .offer-container .item h3 {
+  padding: 5px;
+}
+
+.offer .offer-container .item h3, .offer .offer-container .item p {
+  font-weight: 500;
+}
+
+.offer .offer-container .item p {
+  width: 300px;
+}
+
+@media screen and (max-width: 1100px) {
+  .offer .offer-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .offer .offer-container .item {
+    width: 100%;
+    margin: 0;
+    color: var(--F1);
+    height: 100%;
+    background-color: var(--c3);
+  }
+  .offer .offer-container .item .text {
+    height: 100%;
+  }
+  .offer .offer-container .item p {
+    padding-right: 10%;
+    padding-left: 10%;
+    width: 80%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
