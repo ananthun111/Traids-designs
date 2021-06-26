@@ -292,10 +292,6 @@ nav .menu ul li a {
           transform: translate(0, -50%);
 }
 
-footer {
-  height: 1100vh;
-}
-
 .offer {
   background-color: var(--c3);
   padding: 50px 0;
@@ -393,5 +389,16 @@ footer {
     padding-left: 10%;
     width: 80%;
   }
+}
+
+footer {
+  width: 100%;
+  background-color: var(--c1);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: var(--F1);
+  text-align: center;
+  padding: 20px 0;
 }
 /*# sourceMappingURL=style.css.map */

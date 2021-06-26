@@ -221,9 +221,6 @@ nav{
         }
     }
 }
-footer{ 
-    height: 1100vh;
-}
 .offer{
     background-color: var(--c3);
     padding: 50px 0;
@@ -296,4 +293,12 @@ footer{
             }
         }
     }
+}
+footer{
+    width: 100%;
+    background-color: var(--c1);
+    height: fit-content;
+    color: var(--F1);
+    text-align: center;
+    padding: 20px 0;
 }

@@ -7,7 +7,6 @@
     <title>Triads designs</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 <body>
     <header>
@@ -21,22 +20,22 @@
             <div class="menu" id="menu">
                 <i class="fa fa-close menu-but" aria-hidden="true" onclick="onshow('100%')"></i>
                 <ul class="first">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">Aboput</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li onclick="onshow('100%')"><a href="#home">Home</a></li>
+                    <li onclick="onshow('100%')"><a href="#work">Work</a></li>
+                    <li onclick="onshow('100%')"><a href="#offer">offer</a></li>
+                    <li onclick="onshow('100%')"><a href="#">Blog</a></li>
                 </ul>
                 <ul class="secand">
-                    <li><a href="#"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-link" aria-hidden="true" style=" transform: rotate(90deg); "></i></a></li>
+                    <li><a href="https://www.facebook.com/Triadsdesigns/"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.instagram.com/triadsdesigns/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCYcKGu6JPPcwVk8X81n68Iw/"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.behance.net/triadsdesigns"><i class="fa fa-link" aria-hidden="true" style=" transform: rotate(90deg); "></i></a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <main>
-        <div class="banner">
+        <div class="banner" id="home">
             <div class="parallax">
                 <div class="imges"></div>
             </div>
@@ -50,7 +49,7 @@
                 </div>
             </div>
         </div>
-        <div class="work">
+        <div class="work" id="work">
             <div class="gallery">
                 <div class="items">
                     <img src="pics/card_1.webp" alt="work1">
@@ -90,7 +89,7 @@
                 </div>
             </div>
         </div>
-        <div class="offer">
+        <div class="offer"id="offer">
             <div class="heding">
                 <h2>What We Offer</h2>
                 <p>High Quality Design</p>
@@ -123,7 +122,11 @@
             </div>
         </div>
     </main>
-    <footer></footer>
+    <footer>
+        <p>
+            ©2021 by Triads Designs
+        </p>
+    </footer>
     <script src="js/main.js"></script>
 </body>
 </html>
