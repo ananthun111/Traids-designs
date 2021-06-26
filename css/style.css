@@ -298,7 +298,7 @@ footer {
 
 .offer {
   background-color: var(--c3);
-  padding: 50px;
+  padding: 50px 0;
 }
 
 .offer .heding h2, .offer .heding p {
@@ -345,10 +345,6 @@ footer {
   text-align: center;
   background-color: white;
   width: 350px;
-}
-
-.offer .offer-container .item p, .offer .offer-container .item h2 {
-  color: black;
 }
 
 .offer .offer-container .item img {

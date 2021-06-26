@@ -226,7 +226,7 @@ footer{
 }
 .offer{
     background-color: var(--c3);
-    padding: 50px;
+    padding: 50px 0;
     .heding{
         h2,p{
             color: var(--F1);
@@ -256,9 +256,6 @@ footer{
             text-align: center;
             background-color: white;
             width: 350px;
-            p,h2{
-                color: black;
-            }
             img{
                 width: 100%;
             }
